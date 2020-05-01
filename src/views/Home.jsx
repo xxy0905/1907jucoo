@@ -11,8 +11,8 @@ class Home extends React.Component{
         )
     }
     async componentDidMount(){
-        const  {data}=await  axios.get('/api/home/index/getClassifyHome?city_id=0&abbreviation=&version=6.1.1&referer=2')
-        console.log(data)
+        // const  {data}=await  axios.get('/api/home/index/getClassifyHome?city_id=0&abbreviation=&version=6.1.1&referer=2')
+        // console.log(data)
     }
 } 
 export default Home
