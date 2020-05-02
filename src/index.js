@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import redux from 'redux'
 import store from './store'
+import "lib-flexible"
 import {BrowserRouter as Router} from "react-router-dom"
 import {
   Provider
