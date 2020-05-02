@@ -3,6 +3,7 @@ import style from "../assets/css/ticket.module.css"
 import img1 from "../assets/img/1.png"
 import img2 from "../assets/img/2.jpg"
 import img3 from "../assets/img/3.png"
+import img4 from "../assets/img/4.jpg"
 import axios from "axios"
 export default class Ticket extends Component {
   constructor(){
@@ -13,6 +14,7 @@ export default class Ticket extends Component {
     }
   }
   render() {
+    // console.log(this.props)
     return (
 
       <div className={style.ticket}>
@@ -113,7 +115,29 @@ export default class Ticket extends Component {
               </div>
           </div>
 
-          
+          {/* 相关推荐 */}
+          <div className={style.recommend}>
+            <div className={style.recommend_box}>
+              <div>
+                <span className={style.recommend_title}>相关推荐</span>
+              </div>
+              <div>
+                <i><img  className={style.recommend_img} src={img4} alt=""/></i>   
+              </div>
+              <div className={style.recommend_schedule}>
+                <span>2020.08.22-08.23</span>
+                <span>四川人民艺术剧院-话剧《苏东坡》-石家庄</span>
+                <span>石家庄 | 石家庄大剧院-大剧场</span>
+                <span>
+                  <i>电子票</i>
+                  <i>可选座</i>
+                  <i>套票</i>
+                </span>
+                <span>￥50起</span>
+              </div>
+            </div>
+
+          </div>
 
       </div>
     )

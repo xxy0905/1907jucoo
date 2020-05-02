@@ -245,6 +245,7 @@
 .warn{
     height: 160px;
     background: #fff;
+    margin-bottom: 20px;
     
 }
 .warn_title{
@@ -263,4 +264,23 @@
 .warn_list span{
     
     margin-right: 40px;
+}
+.recommend{
+    background: #fff;
+}
+.recommend_box{
+    margin: 0 30px;
+    display: inline-block;
+}
+.recommend_title{
+    font-size: 36px;
+    line-height: 100px;
+    font-weight: bold;
+}
+.recommend_img{
+    width: 210px;
+    height: 288px;
+}
+.recommend_schedule{
+    display: inline
 }
