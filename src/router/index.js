@@ -6,6 +6,10 @@ import  Index  from  '../views/Index'
 import  Ticket  from  '../views/Ticket'
 export default  [
     {
+        path:"/ticket",
+        component:Ticket
+    },
+    {
         path:'/',
         component:Index,
         childrens:[
@@ -28,8 +32,5 @@ export default  [
             }, 
         ]
     },
-    {
-        path:"/ticket",
-        component:Ticket
-    }
+   
 ]
