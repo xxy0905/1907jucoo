@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div className={"App"}>
-          <MyRouter router={router}></MyRouter>
+        <MyRouter router={router}></MyRouter>
       </div>
     )
   }

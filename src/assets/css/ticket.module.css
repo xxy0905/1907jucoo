@@ -1,0 +1,266 @@
+.ticket{
+    background: #f0f0f0
+}
+.top{
+    width: 750px;
+    height: 436px;
+    background: #181818;
+    box-shadow:0 0 50px #fff inset;
+}
+.title{
+    height: 89px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    line-height: 89px;
+}
+.title i{
+    width: 20px;
+    height: 20px;
+}
+.content{
+    display: flex;
+}
+.content_right{
+    display: flex;
+    height: 300px;
+    width: 220px;
+    margin:30px 30px 0 30px;
+}
+.img2{
+    position:relative;
+}
+.img2 img{
+    display: block;
+    height: 290px;
+    width: 220px;
+}
+.img1{
+    position: absolute;
+    left:0;
+    top:0;
+
+}
+.img1 img{
+    width: 60px;
+    height: 70px;
+    top:-10px;
+    
+}
+.content_left{
+    width: 450px;
+    font-size: 32px;
+    color: #fff;
+    
+}
+.content_left p:first-child{
+    margin-top:40px
+    
+}
+.content_left .bold{
+    font-weight: bold;
+    font-size: 40px;
+    margin-top:130px;
+}
+.support{
+    background: #fff;
+    height: 425px;
+    margin-bottom: 20px;
+}
+.item{
+    border-bottom: 1px solid #EBEBEB;
+    margin: 0 30px;
+}
+.item span{
+    font-size: 26px;
+    color: #5B5B5B;
+    line-height: 83px;
+    margin-left: 30px;
+}
+.brief{
+    height: 222px;
+    margin: 0 30px;
+}
+.info{
+    height: 179px;
+    position: relative;
+}
+.brief p:first-child{
+    font-size: 36px;
+    line-height: 80px;
+}
+.brief p:nth-child(2){
+    font-size: 30px;
+    line-height: 70px;
+}
+.brief p:nth-child(3){
+    font-size: 24px;
+    color: #666
+}
+.position{
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    bottom: 0;
+    right:30px;
+    border-radius : 50%;
+    background: #EDEDED
+}
+.position img{
+    position: absolute;
+    left:9px;
+    top:9px;
+    width: 40px;
+    height: 40px;
+}
+.plus{
+    height: 121px;
+}
+.plus_tips{
+    height: 88px;
+    background: #000;
+    margin:0px 30px;
+    border-radius: 10px;
+}
+.plus_tips div{  
+    height: 88px;
+    margin:0px 30px;
+}
+.plus_tips span{
+}
+.plus_tips span:first-child{
+    
+    height: 35px;
+    background-image: linear-gradient(0deg, #f5dea9, #f8d583);
+}
+.card{
+    width: 112px;
+   font: 22px ""; 
+   line-height: 88px;
+   padding: 0px 5px;
+}
+.plus_tips span:nth-child(2){
+    color: #f5dea9;
+    margin-left: 30px;
+    font-size: 28px;
+}
+.plus_tips span:nth-child(3){
+    color: #f5dea9;
+    margin-left: 60px;
+    font-size: 22px;
+}
+.vip{
+    height: 96px;
+    background: #fff
+}
+.vip_box{
+    margin: 0 30px;
+    height: 94px;
+    line-height: 94px;
+    
+}
+
+.vip_box span:first-child{
+    color: #999;
+    
+    font-weight: 500;
+    font-size: 28px;
+    margin-right: 20px;
+    
+}
+.vip_box span:nth-child(2){
+    color: #999;
+    font-size: 28px;
+    margin-right: 20px;
+}
+.vip_box span:nth-child(3){
+    color: #000;
+    font-size: 24px;
+    margin-right: 10px;
+}
+.vip_box span:nth-child(4){
+    color: #ff6743;
+    font-size: 24px;
+    margin-right: 10px;
+}
+.vip_box:after{
+    content:"";   
+    display:block;
+    height: 2px;
+    background:#EBEBEB; 
+}
+.entry{
+    
+    background: #fff;
+    margin-bottom: 20px;
+}
+.entry_box{
+    height: 103px;
+    padding: 30px 30px 0 30px;
+    display: flex
+    
+}
+.entry span:first-child{
+    color: #999;
+    font-weight: 500;
+    font-size: 28px;
+    width: 90px;
+}
+.entry span:nth-child(2){
+    color: #999;
+    font-size: 28px;
+    margin-right: 20px;
+}
+.entry span:nth-child(3){
+    /* display: block */
+    line-height: 40px;
+    font-size: 26px;
+}
+.detail{
+    background: #fff;
+    margin-bottom: 20px;
+}
+.detail_box{
+    margin: 0px 30px;
+    /* text-align: center; */
+}
+.detail_box img{
+    width: 690px;
+    height: 516px;
+}
+.detail_title{
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 100px;
+    margin: 0 30px;
+}
+.detail_title p{
+    line-height: 100px;
+}
+.detail_title img{
+    width: 100%;
+    height: 100%
+}
+.warn{
+    height: 160px;
+    background: #fff;
+    
+}
+.warn_title{
+    font-size: 36px;
+    line-height: 100px;
+    font-weight: bold;
+    margin: 0 30px;
+
+}
+.warn_list{
+    font-size: 26px;
+    margin: 0 30px;
+    color: #999;
+
+}
+.warn_list span{
+    
+    margin-right: 40px;
+}

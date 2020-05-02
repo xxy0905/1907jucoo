@@ -3,3 +3,20 @@
     justify-content: space-around;
     font-size: 16px;
 }
+
+.active{
+  background-color: red;
+}
+
+*{
+  margin:0;
+  padding: 0
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
