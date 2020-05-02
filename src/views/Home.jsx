@@ -3,6 +3,7 @@ import  axios from  'axios'
 import  home  from  '../assets/home.module.scss'
 import  Swipe from  '../components/home/Swipe'
 import  action  from  '../store/actionType/swipe'
+import  getHomeData from  '../store/actionCreator/home/home'
 import {
     connect
   } from  'react-redux'
@@ -11,7 +12,6 @@ class Home extends React.Component{
         super(props)
     }
     render(){
-        console.log(this.props)
         return(
             <div>
                   <div className={home.top}>
@@ -33,6 +33,8 @@ class Home extends React.Component{
         )
     }
     async componentDidMount(){
+        const  data=await getHomeData()
+        this.props.getswipe()
         console.log(this.props)
     //     const  {data}=await  axios.get('/api/home/index/getClassifyHome?city_id=0&abbreviation=&version=6.1.1&referer=2')
     //     console.log(data)
@@ -44,11 +46,9 @@ class Home extends React.Component{
         }
         const  mapDispatchToProps=(dispatch)=>{
             return{
-            getswipe:()=>{
-                dispatch({
-                    type:action.type
-                })
-            }
+                getswipe:async()=>{
+                    dispatch(await getHomeData())
+                }
             } 
         }
 export default  connect(mapStateToProps ,mapDispatchToProps)(Home)

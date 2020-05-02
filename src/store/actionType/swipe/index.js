@@ -1,3 +1,3 @@
 export default{
-    type:"GET_SWIPE"
+    GET_SWIPE:"GET_SWIPE"
 }
