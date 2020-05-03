@@ -1,13 +1,16 @@
 import  action from '../../actionType/swipe/index'
-import  swipe  from  '../../state/home'
-export default  function (state={swipe},{type,payload}){
-    console.log(swipe,type)
-    console.log(payload,1111111)
-     if(type===action.GET_SWIPE){
+import  data  from  '../../state/home'
+export default  function (state={data},{type,payload}){
+    console.log(data,type)
+    if(type===action.GET_SWIPE){
+        console.log(payload.data.data.classify_list,1111111)
          console.log('fsfsf');
-         state=payload.data
+         state=payload.data.data
+         return{
+             state
+         }
      }
-     return {
-         state
+     else return{
+        state:state.data.data
      }
 }
