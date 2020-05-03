@@ -6,6 +6,7 @@ import  Swipe2  from  '../components/home/Swipe2'
 import  HotSlider  from '../components/home/Hotslider'
 import  action  from  '../store/actionType/swipe'
 import  getHomeData from  '../store/actionCreator/home/home'
+import  Tittle  from  '../components/common/Tittle'
 import {
     connect
   } from  'react-redux'
@@ -32,6 +33,7 @@ class Home extends React.Component{
                          <i>图</i>
                       </div>
                   </div>
+                {/* 广告轮播 */}
                   <div className={home.swipe}>
                       <Swipe></Swipe>
                   </div>
@@ -70,16 +72,17 @@ class Home extends React.Component{
                         <img src="https://image.juooo.com/group1/M00/03/96/rAoKmV6W4RyAdkouAAJa2-GtD74165.png" alt=""/>
                     </div>
                 </section>
+                {/* 热门演出 */}
                 <div className={home.hotslider}>
-                        <div className={home.hotslider_top}>
-                            <h3>热门演出</h3>
-                            <div>
-                                <span>全部</span>
-                                <i>> </i>
-                            </div>
-                        </div>
+                        <Tittle  p='热门演出' href='www.baidu.com' right='全部'></Tittle>
                         <HotSlider></HotSlider>
+                </div>
+                {/* 巡回演出 */}
+                <div className={home.theTour}>
+                      <Tittle p='巡回演出' right='全部'></Tittle>
+                    <div className={home.theTour_content}>
                     </div>
+                </div>
             
             <div className={home.cheng}></div>
             </div>
