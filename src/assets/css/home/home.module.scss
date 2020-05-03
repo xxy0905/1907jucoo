@@ -6,6 +6,7 @@
     text-decoration: none;
 }
 .top{
+    margin: 0 auto;
     height: 100px;
     width: 750px;
     display: flex;
@@ -49,6 +50,7 @@
     }
     // 中
     .section_center{
+        margin-top: 20px;
         width: 695px;
         height: 300px;
         background-color: #fffcf5;
@@ -79,7 +81,7 @@
                  span{
                      display: block;
                      color: #6b4218;
-                    white-space: nowrap;
+                     white-space: nowrap;
                 }
           }
           .top_right{
@@ -93,11 +95,19 @@
     //   下
       .section_center_bottom{
           height: 215px;
-          background: red;
-         
       }
     }
+    .section_bottom{
+        margin-top: 60px;
+        width: 690px;
+        height: 200px;
+        img{
+            width: 690px;
+            height: 200px;
+        }
+    }
 }
+// 10个图标的位置
 .menu{
     width: 130px;
     height: 130px;
@@ -120,4 +130,23 @@
     .menuText{
         margin-top: 0.21333rem;
     }
+}
+// 热门演出
+.hotslider{
+    width:  750px;
+    height: 531px;
+    box-sizing: border-box;
+    padding: 40px;
+  .hotslider_top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
+// 撑开
+.cheng{
+    height: 500px;
 }

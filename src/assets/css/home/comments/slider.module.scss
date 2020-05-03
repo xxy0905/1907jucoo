@@ -1,0 +1,19 @@
+.content{
+    .zong{
+        width: 1000px;
+        height: 380px;
+        display: flex;
+        justify-content: space-around;
+        .page{
+            width:300px;
+           
+             z-index: 500;
+            ul{
+                margin-top: 20px;
+                background:red;
+                width: 200px;
+                height: 380px;
+            }
+        }
+    }
+}

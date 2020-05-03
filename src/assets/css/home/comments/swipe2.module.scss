@@ -4,9 +4,49 @@
     ul{
         height: 272px;
         width:630px;
-        img{
-            width: 700px;
-            height: 328px;
+        // background: red;
+      li{ 
+           list-style: none;
+            width:630px;
+            height: 214px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .li_left{
+                height: 150px;
+                width: 110px;
+                img{
+                    height: 150px;
+                    width: 110px;
+                }
+            }
+            .li_right{
+               width: 475px;
+               height: 130px;
+               display: flex;
+               flex-direction: column;
+               justify-content:space-between;
+                h3{
+                     color: #232323;
+                }
+                .p{
+                    display: block;
+                    display: flex;
+                    color: #232323;
+                    justify-content: space-between;
+                    span{
+                        font-size: 32px;
+                        color: red;
+                    }
+                    button{
+                        width: 140px;
+                        height: 48px;
+                        border: 2px solid #FF6743;
+                        color:#ff6743;
+                        border-radius: 20px;
+                    }
+                }
+            }
         }
     }
 }
@@ -46,6 +86,6 @@
                 height: 10px;
                 border-radius: 25px;
                 border: 1px  solid gainsboro;
-                background-color: #ffffff;
+                background-color: #ff6743;
         }
 }
