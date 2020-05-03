@@ -1,4 +1,9 @@
 const  data={
-    swipe:[]
+    data:
+        {classify_list:[],
+        
+        
+        
+        }
 }
 export  default data;
