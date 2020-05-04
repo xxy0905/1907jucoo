@@ -112,8 +112,14 @@ class Home extends React.Component{
             {/* 为你推荐 */}
             <div className={home.recommended}>
                 <Tittle p='为你推荐' ></Tittle>
-                <div  className={home.recommended_content}></div>
+                <div  className={home.recommended_content}>
+                    
+                </div>
             </div>
+
+
+
+
             <div className={home.cheng}>
                 <button onClick={this.tiao.bind(this)}>跳转</button>
             </div>
@@ -121,7 +127,7 @@ class Home extends React.Component{
         )
     }
     async componentDidMount(){
-       await this.props.getTheTour();
+        await this.props.getTheTour();
         await this.props.getswipe();
     }
 } 
