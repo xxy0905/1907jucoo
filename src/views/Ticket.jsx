@@ -231,7 +231,7 @@ class Ticket extends Component {
     // console.log(Date.now())
   }
   componentDidUpdate(){
-    console.log(this)
+    // console.log(this)
     // this.props.ticketList(this.props.schedular_id);
   }
 }
