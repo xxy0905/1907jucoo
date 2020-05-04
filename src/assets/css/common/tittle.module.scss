@@ -1,0 +1,25 @@
+.top{
+    display: flex;
+    color: #000000;
+    box-sizing: border-box;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    h3{
+        font-weight: 800;
+        font-size: 30px;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        a{
+            color: black;
+        }
+        i{
+           align-self: center;
+           display: block;
+           width: 40px;
+           margin-left: 20px;
+        }
+    }
+}

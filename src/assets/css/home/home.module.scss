@@ -1,7 +1,7 @@
 // 顶部的样式
 
 *{
-    margin: 0;
+    margin: 0 ;
     padding: 0;
     text-decoration: none;
 }
@@ -133,10 +133,9 @@
 }
 // 热门演出
 .hotslider{
+    margin:0 auto;
     width:  750px;
     height: 531px;
-    box-sizing: border-box;
-    padding: 40px;
   .hotslider_top{
         display: flex;
         justify-content: space-between;
@@ -144,7 +143,12 @@
     }
 }
 
-
+// 舞台剧
+.stage{
+   margin: 0 auto;
+   width: 750px;
+   height: 880px;
+}
 
 // 撑开
 .cheng{

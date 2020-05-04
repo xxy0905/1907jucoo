@@ -1,8 +1,7 @@
 const  data={
     data:
-        {classify_list:[],
-        
-        
+        {
+            classify_list:[],
         
         }
 }
