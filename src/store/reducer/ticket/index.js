@@ -1,0 +1,26 @@
+import  ticketType from '../../actionType/ticket'
+import  ticketInit  from  '../../state/ticket'
+export default  function (state={ticketInit},{type,payload}){
+    state = JSON.parse(JSON.stringify(state));
+    console.log(66666,payload)
+     if(type===ticketType.GET_TICKET){
+         state.desc = payload.static_data.show_desc.desc;
+         state.important_note = payload.static_data.important_note;
+         state.support=payload.static_data.support.list;
+         state.price_range=payload.static_data.price_range
+         state.share_pic=payload.share_data.share_pic;
+         state.share_title=payload.share_data.share_title
+         state.show_time_start=payload.static_data.show_time_data.show_time_start;
+         state.show_time_end=payload.static_data.show_time_data.show_time_end;
+         state.city_name = payload.static_data.city.city_name;
+         state.venue_address=payload.static_data.venue.venue_address;
+         state.venue_name=payload.static_data.venue.venue_name;
+         state.list=payload.static_data.show_notice.list
+         
+     }
+     if(type === ticketType.GET_RECOMMEND){
+        state.showList = payload.list;
+     }
+     console.log(888888,state)
+     return state
+}

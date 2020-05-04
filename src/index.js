@@ -7,10 +7,12 @@ import redux from 'redux'
 import store from './store'
 import "lib-flexible"
 import {BrowserRouter as Router} from "react-router-dom"
+import filters from "./filters"
 import {
   Provider
 } from 'react-redux'
 import "lib-flexible"
+React.Component.prototype.$filters = filters
 ReactDOM.render(
       <React.StrictMode>
         <Provider store={store}>

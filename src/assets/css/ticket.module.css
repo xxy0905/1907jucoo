@@ -1,5 +1,6 @@
 .ticket{
-    background: #f0f0f0
+    background: #f0f0f0;
+    position: absolute;
 }
 .top{
     height: 436px;
@@ -10,13 +11,20 @@
     height: 89px;
     font-size: 36px;
     font-weight: bold;
-    text-align: center;
+    margin: 0 30px;
     color: #fff;
     line-height: 89px;
+    display: flex
 }
-.title i{
-    width: 20px;
-    height: 20px;
+.center{
+    flex: 1
+}
+.return{
+    margin-top: 20px;
+}
+.title span:nth-child(2){
+    text-align: center;
+    
 }
 .content{
     display: flex;
@@ -73,7 +81,7 @@
     font-size: 26px;
     color: #5B5B5B;
     line-height: 83px;
-    margin-left: 30px;
+    margin-right: 30px;
 }
 .brief{
     height: 222px;
@@ -116,7 +124,7 @@
 }
 .plus_tips{
     height: 88px;
-    background: #000;
+    background-image: linear-gradient(-4deg, #1e1e1e, #464542);
     margin:0px 30px;
     border-radius: 10px;
 }
@@ -143,7 +151,7 @@
 }
 .plus_tips span:nth-child(3){
     color: #f5dea9;
-    margin-left: 60px;
+    margin-left: 20px;
     font-size: 22px;
 }
 .vip{
@@ -154,6 +162,7 @@
     margin: 0 30px;
     height: 94px;
     line-height: 94px;
+    display: flex;
     
 }
 
@@ -173,11 +182,13 @@
 .vip_box span:nth-child(3){
     color: #000;
     font-size: 24px;
+    
     margin-right: 10px;
 }
 .vip_box span:nth-child(4){
     color: #ff6743;
     font-size: 24px;
+    flex: 1;
     margin-right: 10px;
 }
 .vip_box:after{
@@ -247,9 +258,13 @@
 .warn_title{
     font-size: 36px;
     line-height: 100px;
+    display: flex;
     font-weight: bold;
     margin: 0 30px;
 
+}
+.warn_title span:first-child{
+    flex: 1
 }
 .warn_list{
     font-size: 26px;
@@ -258,7 +273,6 @@
 
 }
 .warn_list span{
-    
     margin-right: 40px;
 }
 .recommend{
@@ -266,17 +280,102 @@
 }
 .recommend_box{
     margin: 0 30px;
-    display: inline-block;
+    padding-bottom: 50px;
+
 }
 .recommend_title{
     font-size: 36px;
     line-height: 100px;
     font-weight: bold;
+    margin: 0 30px;
 }
 .recommend_img{
     width: 210px;
     height: 288px;
 }
+.recommend_box2{
+    display: flex;
+    
+}
 .recommend_schedule{
-    display: inline
+    margin-left: 30px;
+}
+.recommend_schedule p:first-child{
+    font-size: 35px;
+    line-height: 50px;
+}
+.recommend_schedule p:nth-child(2){
+    font-size: 32px;
+    line-height: 50px;
+    width: 450px;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;  /*限制在一个块元素显示的文本的行数*/
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.recommend_schedule p:nth-child(3){
+    font-size: 24px;
+    color: #666;
+    line-height: 50px;
+}
+.label{
+    font-size: 16px;
+    display: flex;
+    line-height: 50px;
+    text-align: center;
+    
+}
+.label span{
+    font-weight: 500;
+    color: #ff6743;
+    margin-right:10px;
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: 20px;;
+    background: #fff1ef
+}
+.label_price{
+    font-size: 32px;
+    color: #ff6743
+}
+.label_price span{
+    font-size: 22px;
+    color: #999
+}
+.bottom{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 110px;
+    background: #fff;
+    border-top:2px solid #EBEBEB;
+    
+}
+.bottom_box{
+    margin: 0 30px;
+    display: flex;
+}
+.img5{
+    width: 40px;
+    color: #666;
+    margin:20px 30px 0 0;
+}
+.img5 img{
+    height: 40px;
+}
+.line{
+    
+    font-size: 34px;
+    color:#fff;
+    width: 100%;
+    text-align: center;
+    margin-top:20px;
+    font-weight: bold;
+    line-height: 80px;
+    border-radius: 80px;
+    background-image: linear-gradient(50deg, #ff9a34, #ff4d4a);
+}
+.placeholder{
+    height: 110px;
 }
