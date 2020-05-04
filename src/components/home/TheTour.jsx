@@ -13,21 +13,18 @@ import   {
         }
     }
     render() { 
-        if(this.props.pro){
-            console.log(this.props.pro[0],333333)
- 
-            console.log(this.props.she[0].name,555555)
-        }
+       
         return (
-            <div className={home.theTour}>
-                      <Tittle p='巡回演出' right='全部'></Tittle>
+            <div className={home.theTour}>     
+                <Tittle p='巡回演出' right='全部' href="https://m.juooo.com/tour/tourShowInfo?sid=2"></Tittle>
+            { this.props.pro[0]?    
                     <div className={home.theTour_content}>
                         <div className={home.theTour_content_left}>
                             <img src={this.props.pro[0].mobile_col_img} alt="nima"/> 
                         </div>
                         <div className={home.theTour_content_right}>
                         <p>{this.props.pro[0].end_time}</p>
-                        <p>{this.props.pro[0].name}</p>
+                        <p className={home.theTour_content_right_p}>{this.props.pro[0].name}</p>
                         <div>
                            <p>
                            <span>￥{this.props.pro[0].min_price}</span>起
@@ -41,7 +38,8 @@ import   {
                           </div>
                         </div>
                         </div>
-                   </div>
+                   </div>:<div/>
+                     }
             </div>
         );
     }

@@ -20,11 +20,16 @@ class Home extends React.Component{
             v:[{name:'fdsdfds'}]
         }
     }
+    tiao(){
+        // console.log(this.props)
+        // this.props.path('/my')
+    }
     render(){
-        console.log(this.props.theTour.state,7777777777777)
+        console.log(this.props,7777777777777)
         return(
             <div>
-                  <div className={home.top}>
+                 <div className={home.navCheng}></div>
+                  <div className={home.navtop}>
                         <div className={home.left}>s
                                 <span>全国</span>
                         </div>
@@ -36,6 +41,7 @@ class Home extends React.Component{
                          <i>图</i>
                       </div>
                   </div>
+                  
                 {/* 广告轮播 */}
                   <div className={home.swipe}>
                       <Swipe></Swipe>
@@ -89,20 +95,34 @@ class Home extends React.Component{
                 {/* 舞台剧 */}
                 <div className={home.stage}>
                 <Tittle p="舞台剧" href='https://m.juooo.com/show/showsLibrary?cid=0&caid=37'></Tittle>
-                <div className="stage_content">
-                    <div className="stage_content_left">
-                        <img src="" alt=""/>
+                <div className={home.stage_content}>
+                    <div className={home.stage_content_left}>
+                        <img src="https://image.juooo.com//group1/M00/04/21/rAoKNV4Jj32AC3hcAAMtvdtNV6E061.png" alt=""/>
                     </div>
-                    <div className="stage_content_right"></div>
+                    <div className={home.stage_content_right}>
+                        <p>2020.07.03<span>周五20.00</span></p>
+                        <p className={home.stage_content_right_p}>[演出延期]2020第七届城市喜剧荒诞喜剧《解除人生》-深圳站</p>
+                        <p>深圳|南山文体中心剧场戏剧小院</p>
+                    </div>
+                </div>
+                <div className={home.state_list}>
                 </div>
                 </div>
-            <div className={home.cheng}></div>
+
+            {/* 为你推荐 */}
+            <div className={home.recommended}>
+                <Tittle p='为你推荐' ></Tittle>
+                <div  className={home.recommended_content}></div>
+            </div>
+            <div className={home.cheng}>
+                <button onClick={this.tiao.bind(this)}>跳转</button>
+            </div>
             </div>
         )
     }
-     componentWillMount(){
-         this.props.getTheTour();
-        this.props.getswipe();
+    async componentDidMount(){
+       await this.props.getTheTour();
+        await this.props.getswipe();
     }
 } 
         const mapStateToProps=(state)=>{

@@ -5,15 +5,24 @@
     padding: 0;
     text-decoration: none;
 }
-.top{
+.navCheng{
+    height: 100px;
+    background-color: #FEFEFE;
+}
+.navtop{
     margin: 0 auto;
     height: 100px;
     width: 750px;
+    background-color: #FEFEFE;
     display: flex;
     font-size: 24px;
     text-align: center;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
+    top: 0px;
+    z-index: 500;
+    
    
     .left{
         width: 100px;
@@ -148,6 +157,46 @@
    margin: 0 auto;
    width: 750px;
    height: 880px;
+   .stage_content{
+    margin-top: 20px;
+    background: #F5F5F5;
+    width: 694px;
+    height:332px ;
+    box-sizing: border-box;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    .stage_content_left{
+        width: 200px;
+        height: 272px;
+        img{
+            width: 200px;
+        }
+    }
+    .stage_content_right{
+        width: 408px;
+        height: 288px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        p{
+            word-wrap: break-word;
+            span{
+                color: red;
+                font-size: 30px;
+            }
+        }
+        .theTour_content_right_p{
+            font-size: 30px;
+            font-weight: 500;
+        }
+     }
+   }
+   .state_list{
+       width: 750px;
+       height: 480px;
+       background-color: red;
+   }
 }
 
 // 撑开
