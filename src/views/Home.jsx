@@ -11,14 +11,17 @@ import {
     connect
   } from  'react-redux'
 import  img1 from  '../assets/img/home/biao.png'
+import TheTour from '../components/home/TheTour'
+import getTheTourData from '../store/actionCreator/home/commones/theTour'
 class Home extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            v:[1,2,3]
+            v:[{name:'fdsdfds'}]
         }
     }
     render(){
+        console.log(this.props.theTour.state,7777777777777)
         return(
             <div>
                   <div className={home.top}>
@@ -40,7 +43,7 @@ class Home extends React.Component{
                 <section className={home.content}>
                     <div className={home.top}>
                             {
-                            this.props.data.classify_list.map(v=>(
+                            this.props.home.data.classify_list.map(v=>(
                                 <div className={home.menu} key={v.id}>
                                     <a href='/ticket'>
                                         <div className={home.menuUi}>
@@ -74,40 +77,46 @@ class Home extends React.Component{
                 </section>
                 {/* 热门演出 */}
                 <div className={home.hotslider}>
-                        <Tittle  p='热门演出' href='www.baidu.com' right='全部'></Tittle>
-                        <HotSlider></HotSlider>
+                    <Tittle  p='热门演出' href='www.baidu.com' right='全部'></Tittle>
+                    <HotSlider data={this.props}></HotSlider>
                 </div>
                 {/* 巡回演出 */}
-                <div className={home.theTour}>
-                      <Tittle p='巡回演出' right='全部'></Tittle>
-                    <div className={home.theTour_content}>
+                {this.props.theTour.state.state?
+                  <TheTour she={this.state.v} pro={this.props.theTour.state.state}></TheTour>:
+                  <div/>
+                }
+                
+                {/* 舞台剧 */}
+                <div className={home.stage}>
+                <Tittle p="舞台剧" href='https://m.juooo.com/show/showsLibrary?cid=0&caid=37'></Tittle>
+                <div className="stage_content">
+                    <div className="stage_content_left">
+                        <img src="" alt=""/>
                     </div>
+                    <div className="stage_content_right"></div>
                 </div>
-            
+                </div>
             <div className={home.cheng}></div>
             </div>
         )
     }
-    async componentDidMount(){
-        const  data=await getHomeData()
-        this.props.getswipe()
-        console.log(data,2222222)
-        // this.setState({
-        //     v:this.props
-        // })
-    //     const  {data}=await  axios.get('/api/home/index/getClassifyHome?city_id=0&abbreviation=&version=6.1.1&referer=2')
-    //     console.log(data)
+     componentWillMount(){
+         this.props.getTheTour();
+        this.props.getswipe();
     }
 } 
         const mapStateToProps=(state)=>{
-            const  data =state.home.state
-            console.log(data,521521)
-            return {data}
+            return  state
         }
         const  mapDispatchToProps=(dispatch)=>{
             return{
                 getswipe:async()=>{
                     dispatch(await getHomeData())
+                },
+                getTheTour:async()=>{
+                    dispatch(await getTheTourData())
+                    console.log(await  getTheTourData(),12345)
+                    
                 }
             } 
         }

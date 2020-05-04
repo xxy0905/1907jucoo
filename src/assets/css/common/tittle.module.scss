@@ -1,6 +1,8 @@
 .top{
     display: flex;
     color: #000000;
+    box-sizing: border-box;
+    padding: 0 20px;
     justify-content: space-between;
     align-items: center;
     h3{
