@@ -21,7 +21,7 @@ class Home extends React.Component{
         }
     }
     render(){
-        console.log(this.props.theTour.state,7777777777777)
+        console.log(this.props,7777777777777)
         return(
             <div>
                   <div className={home.top}>

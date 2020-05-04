@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import style from "../assets/css/ticket.module.css"
 import img1 from "../assets/img/1.png"
-import img2 from "../assets/img/2.jpg"
 import img3 from "../assets/img/3.png"
-import img4 from "../assets/img/4.jpg"
 import img5 from "../assets/img/5.png"
-import img6 from "../assets/img/6.png"
 import axios from "axios"
 import {
   connect
@@ -30,7 +27,11 @@ class Ticket extends Component {
             {/* 顶部 */}
             <div className={style.top}>
               <div className={style.title}>
-              <i className="iconfont">&#xe6ae;</i>
+              <i className="iconfont" onClick={()=>{
+                this.props.history.go(-1)
+                
+                console.log(this.props)
+              }}>&#xe6ae;</i>
               <span className={style.center}>演出详情</span>
               <div>
                 <i className="iconfont">&#xe639;</i>&nbsp;&nbsp;
@@ -230,7 +231,7 @@ class Ticket extends Component {
     // console.log(Date.now())
   }
   componentDidUpdate(){
-    console.log(this.props.path+"/"+this.props.schedular_id)
+    console.log(this)
     // this.props.ticketList(this.props.schedular_id);
   }
 }
@@ -268,4 +269,5 @@ function mapDispatchToProps(dispatch){
     }
     }
 }
+// export default withRouter(My);
 export default  connect(mapStateToProps,mapDispatchToProps)(Ticket)

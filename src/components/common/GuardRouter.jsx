@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {
     withRouter
 } from "react-router-dom"
-export default class GuardRouter extends Component {
+class GuardRouter extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -14,3 +14,4 @@ export default class GuardRouter extends Component {
         )
     }
 }
+export default withRouter(GuardRouter)
