@@ -9,6 +9,7 @@ export default  function (state={ticketInit},{type,payload}){
          state.support=payload.static_data.support.list;
          state.price_range=payload.static_data.price_range
          state.share_pic=payload.share_data.share_pic;
+         state.schedular_id=payload.static_data.schedular_id
          state.share_title=payload.share_data.share_title
          state.show_time_start=payload.static_data.show_time_data.show_time_start;
          state.show_time_end=payload.static_data.show_time_data.show_time_end;
