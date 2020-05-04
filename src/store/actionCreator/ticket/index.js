@@ -13,10 +13,10 @@ export function getRecommend(payload){
     }
 }
 export default {
-    getDetail(){
+    getDetail(schedular_id=111609){
         return  async (dispatch)=> {
             // console.log(11111,this.props);
-            const {data}=await axios.get('/api/Schedule/Schedule/getScheduleInfo?schedular_id=111609&version=6.1.1&referer=2')
+            const {data}=await axios.get('/api/Schedule/Schedule/getScheduleInfo?schedular_id='+schedular_id+'&version=6.1.1&referer=2')
             dispatch(getTicket(data.data))
             // console.log(333333,data)  
         }

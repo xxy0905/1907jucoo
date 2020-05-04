@@ -11,6 +11,6 @@ export default  function (state={data},{type,payload}){
          }
      }
      else return{
-        state:state.data.data
+        // state:state.data.data
      }
 }

@@ -5,6 +5,7 @@ import img2 from "../assets/img/2.jpg"
 import img3 from "../assets/img/3.png"
 import img4 from "../assets/img/4.jpg"
 import img5 from "../assets/img/5.png"
+import img6 from "../assets/img/6.png"
 import axios from "axios"
 import {
   connect
@@ -12,6 +13,12 @@ import {
 import ticketCreator from "../store/actionCreator/ticket"
 
 class Ticket extends Component {
+  constructor(){
+    super()
+    this.state={
+      bb:true
+    }
+  }
   render() {
     // console.log(this.props.support)
     
@@ -123,12 +130,21 @@ class Ticket extends Component {
             <div className={style.detail}>
               <div className={style.detail_title}>
                 <p>演出介绍</p>
-                <div dangerouslySetInnerHTML={{ __html: this.props.important_note }} />
+                <div  dangerouslySetInnerHTML={{ __html: this.props.important_note }} />
               </div>
-              <div className={style.detail_box}>
+              <div className={style.detail_box} style={{display:this.state.bb?"none":"block"}}>
                 <div dangerouslySetInnerHTML={{ __html: this.props.desc }} />
               </div>
-
+              <div className={style.detail_box2}  style={{display:this.state.bb?"block":"none"}}>
+                <div className={style.back}></div>
+                <div className={style.all} onClick={()=>{
+                  this.setState({
+                    bb:false
+                  })
+                }}>展示全部</div>
+                <div dangerouslySetInnerHTML={{ __html: this.props.desc }} />
+                
+              </div>
             </div>
 
 
@@ -160,24 +176,28 @@ class Ticket extends Component {
                   
                   {
                     this.props.showList.map((v,i)=>(
-                      
-                      <div key={i} className={style.recommend_box}>
-                      <div  className={style.recommend_box2}>
-                        <span><img className={style.recommend_img} src={v.pic} alt="" /></span>
-                        <span className={style.recommend_schedule}>
-                        <p>{this.$filters.getShowTime(v.start_show_timestamp,v.end_show_timestamp)}</p>
-                        <p>{v.name}</p>
-                        <p>{v.city_name} | {v.venue_name}</p>
-                        <p className={style.label}>
-                        {
-                          v.support_desc.map((item,key)=>(
-                              <span key={key}>{item}</span>
-                          )) 
-                        }
-                        </p>
-                        <p className={style.label_price}>￥{v.min_price} <span>起</span> </p>
-                        </span>
-                        </div>
+                      // schedular_id
+                      // onClick={this.props.relevant(v.schedular_id)}
+                      //onClick={this.props.ticketList(v.schedular_id)}
+                      <div key={i} className={style.recommend_box} >
+                          <div className={style.recommend_box2} onClick={()=>{
+                            this.props.ticketList(v.schedular_id);
+                          }}>
+                            <span><img className={style.recommend_img} src={v.pic} alt="" /></span>
+                            <span className={style.recommend_schedule}>
+                            <p>{this.$filters.getShowTime(v.start_show_timestamp,v.end_show_timestamp)}</p>
+                            <p>{v.name}</p>
+                            <p>{v.city_name} | {v.venue_name}</p>
+                            <p className={style.label}>
+                            {
+                              v.support_desc.map((item,key)=>(
+                                  <span key={key}>{item}</span>
+                              )) 
+                            }
+                            </p>
+                            <p className={style.label_price}>￥{v.min_price} <span>起</span> </p>
+                            </span>
+                          </div>
                         </div>
                       
                     ))
@@ -204,9 +224,14 @@ class Ticket extends Component {
     )
   }
   componentDidMount() {
-    this.props.ticketList();
+    this.props.ticketList(this.props.schedular_id);
     this.props.recommend()
+    // console.log(this.props.relevant(109024))
     // console.log(Date.now())
+  }
+  componentDidUpdate(){
+    console.log(this.props.path+"/"+this.props.schedular_id)
+    // this.props.ticketList(this.props.schedular_id);
   }
 }
 
@@ -227,14 +252,15 @@ function mapStateToProps(state){
     venue_name:state.ticket.venue_name,
     list:state.ticket.list||[],
     showList:state.ticket.showList||[],
+    schedular_id:state.ticket.schedular_id
   }
 }
 function mapDispatchToProps(dispatch){
   
   return{
-    ticketList(){
+    ticketList(schedular_id){
 
-      dispatch(ticketCreator.getDetail())
+      dispatch(ticketCreator.getDetail(schedular_id))
 
     },
     recommend(){
