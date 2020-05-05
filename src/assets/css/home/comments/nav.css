@@ -1,7 +1,39 @@
 .nav{
-    background-color:red;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    background-color: #fefefe;
+    justify-content: space-between;
+    overflow: hidden;
+}
+/* div */
+
+.select{
+    width: 70px;
+    height: 70px;
+    background-color: red;
+}
+.keshi{
+    width: 50px;
+    height: 50px;
+}
+.wei{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+.xiacheng{
     position: fixed;
     bottom: 0;
-    height: 110px;
-    width: 852px;
+     height: 110px;
 }

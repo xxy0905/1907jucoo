@@ -1,8 +1,9 @@
 const  data={
-    data:
-        {
-            classify_list:[],
-        
-        }
+        classify:{
+                classify_list:[],
+                bottom_list:[]
+        },
+        theTour:[],
+        recommened:[]    
 }
 export  default data;

@@ -2,7 +2,6 @@ import  ticketType from '../../actionType/ticket'
 import  ticketInit  from  '../../state/ticket'
 export default  function (state={ticketInit},{type,payload}){
     state = JSON.parse(JSON.stringify(state));
-    console.log(66666,payload)
      if(type===ticketType.GET_TICKET){
          state.desc = payload.static_data.show_desc.desc;
          state.important_note = payload.static_data.important_note;
@@ -22,6 +21,5 @@ export default  function (state={ticketInit},{type,payload}){
      if(type === ticketType.GET_RECOMMEND){
         state.showList = payload.list;
      }
-     console.log(888888,state)
      return state
 }

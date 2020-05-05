@@ -19,15 +19,15 @@ export default  [
                 component:Home
             },
            {
-                path:'/cinema',
+                path:'/theatre/theatreList',
                 component:Cinema
             },
             {
-                path:'/wallet',
+                path:'https://m.juooo.com/eticket/mine',
                 component:Wallet
             },
             {
-                path:'/my',
+                path:'/myjuooo/myjuooo',
                 component:My
             }, 
         ]
