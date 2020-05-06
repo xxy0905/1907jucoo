@@ -57,15 +57,18 @@
     font-size: 32px;
     color: #fff;
     margin-right:30px; 
+    position: relative;
     
 }
 .content_left p:first-child{
-    margin:40px 0 80px 0;
+    margin:40px 0 0 0;
     
 }
 .bold{
     font-weight: bold;
-    font-size: 40px;
+    font-size: 35px;
+    position: absolute;
+    bottom: 20px;
 }
 .support{
     background: #fff;
@@ -260,11 +263,11 @@
 }
 .detail_box img{
     width: 690px;
-    height: 516px;
+    height: 100%;
 }
 .detail_box2 img{
     width: 690px;
-    height: 516px;
+    height: 100%;
 }
 .detail_title{
     font-size: 36px;

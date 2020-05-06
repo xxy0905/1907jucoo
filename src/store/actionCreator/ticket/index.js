@@ -13,21 +13,17 @@ export function getRecommend(payload){
     }
 }
 export default {
-    getDetail(schedular_id=111609){
+    getDetail(schedular_id=110514){
         return  async (dispatch)=> {
-            // console.log(11111,this.props);
             const {data}=await axios.get('/api/Schedule/Schedule/getScheduleInfo?schedular_id='+schedular_id+'&version=6.1.1&referer=2')
             dispatch(getTicket(data.data))
-            // console.log(333333,data)  
         }
         
     },
-    getShowList(){
+    getShowList(category=91,city_id=1){
         return  async (dispatch)=> {
-            // console.log(11111,this.props);
-            const {data}=await axios.get('/api/Show/Search/getShowList?category=37&city_id=36&version=6.1.1&referer=2')
+            const {data}=await axios.get('/api/Show/Search/getShowList?category='+category+'&city_id='+city_id+'&version=6.1.1&referer=2')
             dispatch(getRecommend(data.data))
-            console.log(333333,data)  
         }
     }
     
