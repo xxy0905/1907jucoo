@@ -1,0 +1,18 @@
+.single{
+    height: 88px;
+    font-size: 36px;
+    text-align: center;
+    color: #232323;
+    line-height: 88px;
+    border-bottom: 2px solid #ebebeb
+}
+.theater_info{
+    margin: 30px;
+    border: 2px solid #ebebeb;
+}
+.theater_title{
+    font-size: 60px;
+}
+.theater_swiper{
+    font-size: 60px;
+}

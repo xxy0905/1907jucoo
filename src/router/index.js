@@ -1,13 +1,17 @@
 import  Home  from  '../views/Home'
 import  Wallet  from '../views/Wallet'
-import  Cinema from  '../views/Cinema'
 import  My  from  '../views/My'
 import  Index  from  '../views/Index'
 import  Ticket  from  '../views/Ticket'
+import  TheatreList  from  '../views/TheatreList'
 export default  [
     {
         path:"/ticket",
         component:Ticket
+    },
+    {
+        path:"/theatreList",
+        component:TheatreList
     },
     {
         path:'/',
@@ -20,7 +24,7 @@ export default  [
             },
            {
                 path:'/theatre/theatreList',
-                component:Cinema
+                component:TheatreList
             },
             {
                 path:'https://m.juooo.com/eticket/mine',
