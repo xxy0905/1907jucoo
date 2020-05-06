@@ -1,35 +1,58 @@
 .nav{
     position: fixed;
     bottom: 0px;
-    left: 0;
-    right: 0;
-    height: 200px;
+    height: 100px;
     width: 100%;
     display: flex;
     background-color: #fefefe;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     overflow: hidden;
 }
 /* div */
-
 .select{
     width: 70px;
     height: 70px;
-    background-color: red;
-}
-.keshi{
-    width: 50px;
-    height: 50px;
 }
 .wei{
     width: 50px;
     height: 50px;
 }
+.selectkeshi{
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+.weibu{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
 
+.selectdi{
+    display: none;
+}
+.selectimg{
+    width: 70px;
+    height: 140px;
+    position: relative;
+    top: -70px;
 
-
-
-
+}
+.weiimg{
+    width: 50px;
+    height: 100px;
+}
+.weidi{
+    text-align: center;
+    display: block;
+    z-index: 500;
+    color: red;
+}
+.keshi{
+    width: 50px;
+    height: 50px;
+}
 
 
 .xiacheng{

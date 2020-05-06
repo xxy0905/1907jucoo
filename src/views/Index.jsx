@@ -12,7 +12,6 @@ import {connect}  from  'react-redux'
              Index:0
          }
      }
-   
     render() {
          console.log(this.props.history,2222222222)
          console.log(this.props.home.classify,33333333333)
@@ -23,12 +22,12 @@ import {connect}  from  'react-redux'
                 {
                     this.props.home.classify.bottom_list.map((v,i)=>(
                         <div onClick={()=>this.setState({Index:i})}
-                         className={this.Index===i?"select":"wei"}
+                         className={this.state.Index===i?"select":"wei"}
                          key={v.name}>
-                             <div  className="keshi">
-                                <img src="pic" alt=""/>
+                             <div  className={this.state.Index===i?"selectkeshi":"weibu"}>
+                                <img onClick={()=>this.props.history.push(v.url)}  className={this.state.Index===i?"selectimg":"weiimg"} src={v.pic} alt=""/>
                             </div>
-                         <NavLink exact to={v.url}>{v.name}</NavLink>
+                         <NavLink className={this.state.Index===i?"selectdi":"weidi"} exact to={v.url}>{v.name}</NavLink>
                         </div>
                     ))
                  } 

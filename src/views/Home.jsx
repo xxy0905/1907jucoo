@@ -26,7 +26,7 @@ class Home extends React.Component{
         }
     }
     async handleScroll(){
-        if(this.header.offsetTop+this.state.listHeight-(window.scrollY+800)<=0){
+        if(this.header.offsetTop+this.state.listHeight-(window.scrollY+1200)<=0){
           await this.setState({
                 listPage:++this.state.listPage,
                 listHeight:this.state.listHeight+=1000,
@@ -42,7 +42,7 @@ class Home extends React.Component{
                  })
             console.log(this.state.dataList,22222)
         }else{
-            return
+            return false;
         }
     }
 
