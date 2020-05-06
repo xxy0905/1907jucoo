@@ -68,6 +68,7 @@ class TheatreList extends Component {
                     
                 ))
                 }
+                <div className={style.box}></div>
                 {/* <div className={style.theater_info}>
                     <div className={style.theater_info_box}>
                         <div className={style.theater_title}>
