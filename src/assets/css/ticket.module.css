@@ -260,11 +260,11 @@
 }
 .detail_box img{
     width: 690px;
-    height: 516px;
+    height: 100%;
 }
 .detail_box2 img{
     width: 690px;
-    height: 516px;
+    height: 100%;
 }
 .detail_title{
     font-size: 36px;

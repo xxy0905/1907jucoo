@@ -17,9 +17,6 @@ class Ticket extends Component {
     }
   }
   render() {
-    // console.log(this.props.support)
-    
-    // console.log(this.props)
     return (
 
       <div className={style.ticket}>
@@ -29,13 +26,13 @@ class Ticket extends Component {
               <div className={style.title}>
               <i className="iconfont" onClick={()=>{
                 this.props.history.go(-1)
-                
-                console.log(this.props)
               }}>&#xe6ae;</i>
               <span className={style.center}>演出详情</span>
               <div>
                 <i className="iconfont">&#xe639;</i>&nbsp;&nbsp;
-                <i className="iconfont">&#xe658;</i>
+                <i className="iconfont" onClick={()=>{
+                this.props.history.push('/')
+              }}>&#xe658;</i>
               </div>
               
               </div>
@@ -70,7 +67,6 @@ class Ticket extends Component {
                 <span key={v}><i className="iconfont_gou">&#xe6ce;</i> {v}</span>
             ))
                 
-                // console.log(this.props.support)
               }
                 <span><i className="iconfont_p">&#xe63c;</i> </span>
               </div>
@@ -105,7 +101,6 @@ class Ticket extends Component {
 
 
             </div>
-
 
             {/* vip */}
             <div className={style.vip}>
@@ -173,13 +168,10 @@ class Ticket extends Component {
                 <div className={style.recommend_title}>
                   <span>相关推荐</span>
                 </div>
-                
                   
                   {
+                    
                     this.props.showList.map((v,i)=>(
-                      // schedular_id
-                      // onClick={this.props.relevant(v.schedular_id)}
-                      //onClick={this.props.ticketList(v.schedular_id)}
                       <div key={i} className={style.recommend_box} >
                           <div className={style.recommend_box2} onClick={()=>{
                             this.props.ticketList(v.schedular_id);
@@ -224,15 +216,11 @@ class Ticket extends Component {
       </div>
     )
   }
-  componentDidMount() {
+ 
+  
+  componentWillMount(){
     this.props.ticketList(this.props.schedular_id);
     this.props.recommend()
-    // console.log(this.props.relevant(109024))
-    // console.log(Date.now())
-  }
-  componentDidUpdate(){
-    // console.log(this)
-    // this.props.ticketList(this.props.schedular_id);
   }
 }
 
@@ -244,6 +232,8 @@ function mapStateToProps(state){
     important_note:state.ticket.important_note,
     support:state.ticket.support||[],
     share_pic:state.ticket.share_pic,
+    city_id:state.ticket.city_id,
+    cate_parent_id:state.ticket.cate_parent_id,
     share_title:state.ticket.share_title,
     price_range:state.ticket.price_range,
     show_time_end:state.ticket.show_time_end,
@@ -253,7 +243,7 @@ function mapStateToProps(state){
     venue_name:state.ticket.venue_name,
     list:state.ticket.list||[],
     showList:state.ticket.showList||[],
-    schedular_id:state.ticket.schedular_id
+    schedular_id:state.ticket.schedular_id,
   }
 }
 function mapDispatchToProps(dispatch){
