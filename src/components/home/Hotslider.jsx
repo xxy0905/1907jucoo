@@ -2,7 +2,6 @@
 import React from 'react';
 import ReactSwipe from 'react-swipe';
 import  slider  from  '../../assets/css/home/comments/slider.module.scss'
-import  action from  '../../store/actionType/swipe'
 
 class hotSlider extends React.Component{
   constructor() {

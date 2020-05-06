@@ -13,11 +13,9 @@ import   {
         }
     }
     render() { 
-       
         return (
             <div className={home.theTour}>     
-                <Tittle p='巡回演出' right='全部' href="https://m.juooo.com/tour/tourShowInfo?sid=2"></Tittle>
-            { this.props.pro[0]?    
+                <Tittle p='巡回演出' right='全部' href="https://m.juooo.com/tour/tourShowInfo?sid=2"></Tittle> 
                     <div className={home.theTour_content}>
                         <div className={home.theTour_content_left}>
                             <img src={this.props.pro[0].mobile_col_img} alt="nima"/> 
@@ -38,8 +36,7 @@ import   {
                           </div>
                         </div>
                         </div>
-                   </div>:<div/>
-                     }
+                   </div>
             </div>
         );
     }

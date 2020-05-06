@@ -8,9 +8,9 @@
 .navCheng{
     height: 100px;
     background-color: #FEFEFE;
+    margin: 0 auto;
 }
 .navtop{
-    margin: 0 auto;
     height: 100px;
     width: 750px;
     background-color: #FEFEFE;
@@ -20,7 +20,10 @@
     align-items: center;
     justify-content: space-around;
     position: fixed;
-    top: 0px;
+    top: 0px ;
+    left: 0px;
+    right: 0px;
+    margin: auto;
     z-index: 500;
     
    
@@ -197,6 +200,69 @@
        height: 480px;
        background-color: red;
    }
+}
+
+// 为你推荐
+.recommended{
+    // background-color: red;
+    width: 750px;
+    // margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0  20px;
+    height: 700px;
+    margin: 0 auto;
+    // overflow: auto; //设置scroll overflow
+    // -webkit-overflow-scrolling: touch; // 优化移动端滑动体验
+    .recommended_content{   
+        // background-color: royalblue;
+        column-count: 2;
+        column-width: 340px;
+        overflow: hidden;
+        .listed{
+            margin-bottom: 20px;
+            .list_top{
+                background: red;
+                width: 340px;
+                .picc{
+                    width:340px ;
+                }
+            }
+            .list_mm{
+                margin-top: 10px;
+              .nima{
+                text-align: center;
+                font-size: 25px;
+                color: #232323;
+                  .span{
+                      display: inline-block;
+                      width: 60px;
+                      height: 30px;
+                     
+                  };
+              }
+              .p{
+                  color: #666666;
+                  text-align: center;
+              }
+              .s{
+                  color: #999999;
+                  span{
+                      color: #FF6743;
+                      font-size: 20px;
+                  }
+              }
+              .v{
+                  span{
+                    margin-right: 10px;
+                      color: #FF6743;
+                      background-color: #FFF1EF;
+
+                  }
+              }
+            }
+            
+        }
+    }
 }
 
 // 撑开
