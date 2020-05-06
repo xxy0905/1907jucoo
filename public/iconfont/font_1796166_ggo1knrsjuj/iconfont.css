@@ -9,47 +9,7 @@
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 20px;
-  font-weight: 300;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.iconfont_gou{
-  font-family: "iconfont" !important;
-  font-size: 10px;
-  color:red;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.iconfont_p{
-  font-family: "iconfont" !important;
-  font-size: 10px;
-  font-weight: bold;
-  color: black;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.iconfont_one{
-  font-family: "iconfont" !important;
-  font-size: 13px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.iconfont_two{
-  font-family: "iconfont" !important;
-  font-size: 15px;
-  color: #f5dea9;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.iconfont_three{
-  font-family: "iconfont" !important;
-  font-size: 13px;
+  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

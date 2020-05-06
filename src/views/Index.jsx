@@ -13,8 +13,8 @@ import {connect}  from  'react-redux'
          }
      }
     render() {
-         console.log(this.props.history,2222222222)
-         console.log(this.props.home.classify,33333333333)
+        //  console.log(this.props.history,2222222222)
+        //  console.log(this.props.home.classify,33333333333)
         return (
             <div>
                 <MyRouter router={this.props.childrens}></MyRouter>
