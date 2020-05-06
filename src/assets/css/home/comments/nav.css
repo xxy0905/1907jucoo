@@ -1,13 +1,14 @@
 .nav{
     position: fixed;
     bottom: 0px;
-    height: 100px;
+    height: 110px;
     width: 100%;
     display: flex;
     background-color: #fefefe;
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
+    color: black;
 }
 /* div */
 .select{
@@ -47,7 +48,7 @@
     text-align: center;
     display: block;
     z-index: 500;
-    color: red;
+    color: #000000;
 }
 .keshi{
     width: 50px;

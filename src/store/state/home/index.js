@@ -4,6 +4,7 @@ const  data={
                 bottom_list:[]
         },
         theTour:[],
-        recommened:[]    
+        recommened:[],
+        hots_show_list:[],   
 }
 export  default data;

@@ -1,78 +1,32 @@
 
 import React from 'react';
-import ReactSwipe from 'react-swipe';
 import  slider  from  '../../assets/css/home/comments/slider.module.scss'
 
 class hotSlider extends React.Component{
   constructor() {
     super();
     this.state = {
-      index: 0
     }
   }
   render() {
-    let opt = {
-      callback: function(index) {
-        this.setState({index: Number(index)})
-      }.bind(this)
-    }
     return (
-      <div className={slider.content}>
-        <ReactSwipe className="carousel" swipeOptions={opt}> 
-            <div className={slider.zong}>
-                <div className={slider.page}>
-                    <ul className='clear-fix'>
-                        <a href="">
-                        <div className={slider.top}></div>
-                        <div className={slider.bottom}></div>
-                    </a>
-                </ul>
-            </div>
-                <div className={slider.page}>
-                    <ul className='clear-fix'>
-                        <a href="">
-                        <div className={slider.top}></div>
-                        <div className={slider.bottom}></div>
-                    </a>
-                </ul>
-            </div>
-                <div className={slider.page}>
-                    <ul className='clear-fix'>
-                        <a href="">
-                        <div className={slider.top}></div>
-                        <div className={slider.bottom}></div>
-                    </a>
-                </ul>
-            </div>
-            </div>
-            <div className={slider.zong}>
-                <div className={slider.page}>
-                    <ul className='clear-fix'>
-                        <a href="">
-                        <div className={slider.top}></div>
-                        <div className={slider.bottom}></div>
-                    </a>
-                </ul>
-            </div>
-                <div className={slider.page}>
-                    <ul className='clear-fix'>
-                        <a href="">
-                        <div className={slider.top}></div>
-                        <div className={slider.bottom}></div>
-                    </a>
-                </ul>
-            </div>
-                <div className={slider.page}>
-                    <ul className='clear-fix'>
-                        <a href="">
-                        <div className={slider.top}></div>
-                        <div className={slider.bottom}></div>
-                    </a>
-                </ul>
-            </div>
-            </div>
-        </ReactSwipe>
-      </div>
+        <div className={slider.imageList}>
+            {
+                this.props.data.map(v=>(
+                    <div key={v.show_name} className={slider.solo}>
+                        <a href={v.schedular_url}>
+                        <div className={slider.imgBox}>
+                            <img src={v.pic}/>
+                        </div>
+                        <div className={slider.imgBottom}>
+                           <p>{v.show_name}</p>
+                        </div>
+                        </a>
+                        </div>
+
+                ))
+            }
+        </div>
     )
   }
    componentDidUpdate() {
@@ -80,4 +34,4 @@ class hotSlider extends React.Component{
 }
 
  
-export default hotSlider;
+export default  hotSlider;

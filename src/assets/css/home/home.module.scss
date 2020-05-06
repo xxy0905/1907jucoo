@@ -33,12 +33,18 @@
         line-height: 48px;
     }
     .center{
+        display: flex;
+        align-items: center;
+        float: left;
         width: 412px;
         height: 52px;
         border: 1px;
-        line-height: 52px;
         border: 3px solid #000000;
         border-radius: 25px;
+        i{
+            align-self: center;;
+            margin-left: 10px;
+        }
     }
     .right{
         height: 35px;
@@ -204,27 +210,23 @@
 
 // 为你推荐
 .recommended{
-    // background-color: red;
     width: 750px;
-    // margin: 0 auto;
-    box-sizing: border-box;
-    padding: 0  20px;
-    height: 700px;
     margin: 0 auto;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0  25px;
     // overflow: auto; //设置scroll overflow
     // -webkit-overflow-scrolling: touch; // 优化移动端滑动体验
-    .recommended_content{   
-        // background-color: royalblue;
-        column-count: 2;
-        column-width: 340px;
-        overflow: hidden;
+    .recommended_content{ 
+        display: flex;
+        justify-content: space-between;
         .listed{
-            margin-bottom: 20px;
+            width: 340px;
+             margin-bottom: 20px;
             .list_top{
-                background: red;
                 width: 340px;
                 .picc{
-                    width:340px ;
+                    width:340px;
                 }
             }
             .list_mm{
@@ -248,7 +250,7 @@
                   color: #999999;
                   span{
                       color: #FF6743;
-                      font-size: 20px;
+                      font-size: 30px;
                   }
               }
               .v{

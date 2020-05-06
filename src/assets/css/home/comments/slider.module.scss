@@ -1,19 +1,38 @@
-.content{
-    .zong{
-        width: 1000px;
-        height: 380px;
+.imageList{
+    margin-top: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        height:442px;
+        white-space: nowrap;
         display: flex;
-        justify-content: space-around;
-        .page{
-            width:300px;
-           
-             z-index: 500;
-            ul{
-                margin-top: 20px;
-                background:red;
-                width: 200px;
-                height: 380px;
+        .solo{
+            a{
+                color: #000;
             }
+            margin-left: 20px;
+              width: 214px;
+              height: 442px;
+              .imgBox{
+                  width: 290px;
+                  img{
+                    width:auto;
+                    height:290px;
+                  }
+              }
+              .imgBottom{
+                  margin-top: 10px;
+                  font-size: 28px;
+                  p{
+                      text-overflow: ellipsis;
+                      white-space:pre-wrap;
+                      text-overflow:ellipsis
+                    
+                  };
+                  span{
+                      color: #FF6743;
+                      font-size: 32px;
+                  };
+              }
         }
-    }
-}
+     
+ }
