@@ -4,14 +4,15 @@ import  My  from  '../views/My'
 import  Index  from  '../views/Index'
 import  Ticket  from  '../views/Ticket'
 import  TheatreList  from  '../views/TheatreList'
+import  TheatreDetail  from  '../views/TheatreDetail'
 export default  [
     {
-        path:"/ticket",
+        path:"/ticket/:schedular_id",
         component:Ticket
     },
     {
-        path:"/theatreList",
-        component:TheatreList
+        path:"/theatre/detail/:id",
+        component:TheatreDetail
     },
     {
         path:'/',

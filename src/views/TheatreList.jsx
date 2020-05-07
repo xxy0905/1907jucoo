@@ -22,7 +22,9 @@ class TheatreList extends Component {
                                 v.count>0?
                                 <div className={style.theater_info} >
                         <div className={style.theater_info_box}>
-                            <div className={style.theater_title}>
+                            <div className={style.theater_title} onClick={()=>{
+                                this.props.history.push("/theatre/detail/"+v.id)
+                            }}>
                                 <div className={style.img7}><img src={v.pic} alt=""/></div>
                                 <div className={style.theater_name}>
                                     <span>{v.name}</span>
