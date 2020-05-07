@@ -17,11 +17,12 @@ class Ticket extends Component {
     }
   }
   render() {
+    // console.log(this.props.location.state.id,11111111111111111)
     return (
 
       <div className={style.ticket}>
       <div>
-            {/* 顶部 */}
+            顶部
             <div className={style.top}>
               <div className={style.title}>
               <i className="iconfont" onClick={()=>{
@@ -167,10 +168,8 @@ class Ticket extends Component {
               
                 <div className={style.recommend_title}>
                   <span>相关推荐</span>
-                </div>
-                  
-                  {
-                    
+                </div>              
+                  {          
                     this.props.showList.map((v,i)=>(
                       <div key={i} className={style.recommend_box} >
                           <div className={style.recommend_box2} onClick={()=>{
@@ -191,42 +190,32 @@ class Ticket extends Component {
                             <p className={style.label_price}>￥{v.min_price} <span>起</span> </p>
                             </span>
                           </div>
-                        </div>
-                      
-                    ))
-                    
+                        </div>                   
+                    ))              
                   }
-                  
-
             </div>
       </div>
-        
-
         <div className={style.placeholder}>
-
         </div>
         {/* 底部 */}
         <div className={style.bottom}>
           <div className={style.bottom_box}>
             <div className={style.img5}><img src={img5} alt=""/> 客服</div>
             <div className={style.line}>选座购买</div>
-          </div>
-            
+          </div>   
         </div>
       </div>
     )
   }
- 
-  
   componentWillMount(){
-    this.props.ticketList(this.props.schedular_id);
+    this.props.ticketList(this.props.match.params.id);
     this.props.recommend()
   }
+
 }
 
 function mapStateToProps(state){
   console.log(state)
-  // return state
   return {
     desc:state.ticket.desc,
     important_note:state.ticket.important_note,
@@ -247,12 +236,9 @@ function mapStateToProps(state){
   }
 }
 function mapDispatchToProps(dispatch){
-  
   return{
     ticketList(schedular_id){
-
       dispatch(ticketCreator.getDetail(schedular_id))
-
     },
     recommend(){
       dispatch(ticketCreator.getShowList())

@@ -28,15 +28,12 @@ class Home extends React.Component{
             rightData:[],
         }
     }
-    async handleScroll(){
-        console.log('jinlaiele')
+ handleScroll= async ()=>{
         const  {hasMore}=this.state
         if(!hasMore){
             return
         }
-        // console.log(this.body.offsetHeight-window.pageYOffset-window.innerHeight)
         if(document.body.offsetHeight-window.pageYOffset-window.innerHeight<=1000){
-            console.log('keyi qingqiule')
             await this.setState({
                 hasMore:false
             })
@@ -45,7 +42,6 @@ class Home extends React.Component{
             })
             const  data=await  getRecommendedData(this.state.listPage)
             const arr=data.payload.data.data.list  
-            console.log(arr)
             await this.setState({
                 dataList:[
                     ...this.state.dataList,
@@ -80,7 +76,6 @@ class Home extends React.Component{
 
 
     render(){
-        // console.log(this.state.dataList)
         return(
             <div ref={ref=>this.body=ref}> 
             <div className={home.navCheng}></div>
@@ -145,6 +140,7 @@ class Home extends React.Component{
                        <HotSlider data={this.props.home.hots_show_list} ></HotSlider>:<div/>
                     }
                </div>
+               
                {/* 巡回演出 */}
                {this.props.home.theTour[0]?
                  <TheTour she={this.state.v} pro={this.props.home.theTour}></TheTour>:
@@ -171,87 +167,85 @@ class Home extends React.Component{
                </div>
  
  
-            {/* 为你推荐 */}
-            <div  className={home.recommended}
-                ref={ref=>this.header=ref}>
-                   <Tittle p='为你推荐' className='header'  ></Tittle>
-                   <div  
-                    className={home.recommended_content}
-                    // style={{height:this.state.listHeight}}
-                    >
-                        <div className={home.flow_left}>
-                        {
-                            this.state.leftData.map(v=>(
-                                <div key={v.schedular_id}  className={home.listed} >
-                                    <div className={home.list_top  } >                              
-                                        <img  className={home.picc} src={v.pic} alt=""/>
+                {/* 为你推荐 */}
+                <div  className={home.recommended}
+                    ref={ref=>this.header=ref}>
+                    <Tittle p='为你推荐' className='header'  ></Tittle>
+                    <div  
+                        className={home.recommended_content}
+                        // style={{height:this.state.listHeight}}
+                        >
+                            <div className={home.flow_left}>
+                            {
+                                this.state.leftData.map(v=>(
+                                    <div onClick={()=>this.props.history.push('/ticket/'+v.schedular_id)}  key={v.schedular_id}  className={home.listed} >
+                                        <div className={home.list_top  } >                              
+                                            <img  className={home.picc} src={v.pic} alt=""/>
+                                        </div>
+                                        <div className={home.list_mm}>
+                                            <div className={home.nima}><img className={home.span} src="https://image.juooo.com/upload/i.png" alt=""/>{v.name}</div>
+                                            <div className={home.p}>{v.end_show_time}</div>
+                                            <div className={home.s}><span>￥{v.min_price}</span>起</div>
+                                            <div className={home.v}>
+                                                {
+                                                    v.support_desc.map(s=>
+                                                    <span key={s}>{s}</span>
+                                                    )
+                                                }
+                                            </div> 
+                                        </div>
                                     </div>
-                                    <div className={home.list_mm}>
-                                        <div className={home.nima}><img className={home.span} src="https://image.juooo.com/upload/i.png" alt=""/>{v.name}</div>
-                                        <div className={home.p}>{v.end_show_time}</div>
-                                        <div className={home.s}><span>￥{v.min_price}</span>起</div>
-                                        <div className={home.v}>
-                                            {
-                                                v.support_desc.map(s=>
-                                                <span key={s}>{s}</span>
-                                                )
-                                            }
-                                        </div> 
+                                ))
+                            }
+                            </div>
+                            <div className={home.flow_right}>
+                            {
+                                this.state.rightData.map(v=>(
+                                    <div onClick={()=>this.props.history.push('/ticket/'+v.schedular_id)} key={v.schedular_id}  className={home.listed} >
+                                        <div className={home.list_top  } >                              
+                                            <img  className={home.picc} src={v.pic} alt=""/>
+                                        </div>
+                                        <div className={home.list_mm}>
+                                            <div className={home.nima}><img className={home.span} src="https://image.juooo.com/upload/i.png" alt=""/>{v.name}</div>
+                                            <div className={home.p}>{v.end_show_time}</div>
+                                            <div className={home.s}><span>￥{v.min_price}</span>起</div>
+                                            <div className={home.v}>
+                                                {
+                                                    v.support_desc.map(s=>
+                                                    <span key={s}>{s}</span>
+                                                    )
+                                                }
+                                            </div> 
+                                        </div>
                                     </div>
-                                </div>
-                            ))
-                        }
-                        </div>
-                        <div className={home.flow_right}>
-                        {
-                            this.state.rightData.map(v=>(
-                                <div key={v.schedular_id}  className={home.listed} >
-                                    <div className={home.list_top  } >                              
-                                        <img  className={home.picc} src={v.pic} alt=""/>
-                                    </div>
-                                    <div className={home.list_mm}>
-                                        <div className={home.nima}><img className={home.span} src="https://image.juooo.com/upload/i.png" alt=""/>{v.name}</div>
-                                        <div className={home.p}>{v.end_show_time}</div>
-                                        <div className={home.s}><span>￥{v.min_price}</span>起</div>
-                                        <div className={home.v}>
-                                            {
-                                                v.support_desc.map(s=>
-                                                <span key={s}>{s}</span>
-                                                )
-                                            }
-                                        </div> 
-                                    </div>
-                                </div>
-                            ))
-                        }
-    
-                        </div>
-                        
+                                ))
+                            }
+        
+                            </div>
+                            
+                    </div>
                 </div>
-            </div>
- 
- 
-           <div className={home.cheng}>
-           </div>
-           </div>
+    
+    
+                <div className={home.cheng}>
+                </div>
+                </div>
         )
     }
     async componentWillMount(){
-       
-    }
-    async componentDidMount(){
         await this.props.getswipe();
         await this.props.getTheTour();
         await this.props.getHotShow();
         await this.props.getRecommended();
-        window.addEventListener('scroll',this.handleScroll.bind(this));
+
+    }
+    async componentDidMount(){
+       
+        window.addEventListener('scroll',this.handleScroll);
 
     }
     componentWillUnmount(){
-        window.removeEventListener('scroll',this.scroll())
-    }
-    scroll(){
-        console.log('yichu')
+        window.removeEventListener('scroll',this.handleScroll)
     }
 } 
     const mapStateToProps=(state)=>{

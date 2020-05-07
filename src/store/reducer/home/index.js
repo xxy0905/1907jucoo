@@ -3,7 +3,6 @@ import  data  from  '../../state/home'
 export default  function (state=data,{type,payload}){
     
      state=JSON.parse(JSON.stringify(state))
-     console.log(payload,22222222222222)
      if(type===action.GET_SWIPE){
          state.classify=payload.data.data
      }

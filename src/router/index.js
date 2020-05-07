@@ -6,7 +6,7 @@ import  Ticket  from  '../views/Ticket'
 import  TheatreList  from  '../views/TheatreList'
 export default  [
     {
-        path:"/ticket",
+        path:"/ticket/:id",
         component:Ticket
     },
     {
