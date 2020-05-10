@@ -33,7 +33,7 @@ class Home extends React.Component{
         if(!hasMore){
             return
         }
-        if(document.body.offsetHeight-window.pageYOffset-window.innerHeight<=1000){
+        if(document.body.offsetHeight-window.pageYOffset-window.innerHeight<=1200){
             await this.setState({
                 hasMore:false
             })
@@ -76,6 +76,7 @@ class Home extends React.Component{
 
 
     render(){
+        console.log(this.props)
         return(
             <div ref={ref=>this.body=ref}> 
             <div className={home.navCheng}></div>
@@ -96,12 +97,14 @@ class Home extends React.Component{
                  <div className={home.swipe}>
                      <Swipe></Swipe>
                  </div>
+               
+               {/* 菜单导航 */}
                <section className={home.content}>
                    <div className={home.top}>
                         {
                             this.props.home.classify.classify_list.map(v=>(
                                <div className={home.menu} key={v.id}>
-                                   <a href='/ticket'>
+                                   <a  onClick={()=>this.props.history.push({pathname:'/show',state:{id:v.category_id}})}>
                                        <div className={home.menuUi}>
                                            <img src={v.pic} alt=""/>
                                        </div>

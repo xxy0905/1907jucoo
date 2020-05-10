@@ -5,6 +5,7 @@ import  Index  from  '../views/Index'
 import  Ticket  from  '../views/Ticket'
 import  TheatreList  from  '../views/TheatreList'
 import  TheatreDetail  from  '../views/TheatreDetail'
+import navigation from '../views/navigation'
 export default  [
     {
         path:"/ticket/:id",
@@ -13,6 +14,10 @@ export default  [
     {
         path:"/theatre/detail/:id/:vid",
         component:TheatreDetail
+    },
+    {
+        path:"/show",
+        component:navigation
     },
     {
         path:'/',
