@@ -2,7 +2,7 @@ import  theaterDetailType  from  '../../actionType/theaterDetail'
 import axios from  'axios'
 export function getShowList(payload) {
     return {
-        type:"GET_SHOW_LIST",
+        type:"GET_SHOW_DETAIL",
         payload
     }
 }

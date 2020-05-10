@@ -3,7 +3,7 @@ import  theater_detail  from  '../../state/theaterDetail'
 export default  function (state=theater_detail,{type,payload}){
     // console.log(payload)
     state = JSON.parse(JSON.stringify(state));
-     if(type===theaterDetailType.GET_SHOW_LIST){
+     if(type===theaterDetailType.GET_SHOW_DETAIL){
         state.theater_detail = payload.list;
      }
      if(type === theaterDetailType.GET_HEADER){
