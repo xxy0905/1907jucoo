@@ -71,50 +71,6 @@ class TheatreList extends Component {
                 ))
                 }
                 <div className={style.box}></div>
-                {/* <div className={style.theater_info}>
-                    <div className={style.theater_info_box}>
-                        <div className={style.theater_title}>
-                            <div className={style.img7}><img src={img7} alt=""/></div>
-                            <div className={style.theater_name}>
-                                <span>南山文体中心</span>
-                                <p>92场在售演出</p>
-                            </div>
-                            <div className={style.theater_more}>
-                                <i className="iconfont">&#xe63d;</i>
-                            </div>
-                        </div>
-                        <div className={style.theater_swiper}>
-                            <div className={style.theater_swiper_slide}>
-                                <div className={style.theater_swiper_box}>
-                                    <p className={style.theater_swiper_date}>05月29日</p>
-                                    <p className={style.theater_swiper_dian}>·</p>
-                                </div>
-                                <p className={style.theater_swiper_pic}><img src={img8} alt=""/></p>
-                            </div>
-                            <div className={style.theater_swiper_slide}>
-                                <div className={style.theater_swiper_box}>
-                                    <p className={style.theater_swiper_date}>05月29日</p>
-                                    <p className={style.theater_swiper_dian}>·</p>
-                                </div>
-                                <p className={style.theater_swiper_pic}><img src={img8} alt=""/></p>
-                            </div>
-                            <div className={style.theater_swiper_slide}>
-                                <div className={style.theater_swiper_box}>
-                                    <p className={style.theater_swiper_date}>05月29日</p>
-                                    <p className={style.theater_swiper_dian}>·</p>
-                                </div>
-                                <p className={style.theater_swiper_pic}><img src={img8} alt=""/></p>
-                            </div>
-                            <div className={style.theater_swiper_slide}>
-                                <div className={style.theater_swiper_box}>
-                                    <p className={style.theater_swiper_date}>05月29日</p>
-                                    <p className={style.theater_swiper_dian}>·</p>
-                                </div>
-                                <p className={style.theater_swiper_pic}><img src={img8} alt=""/></p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
                 
             </div>
         )
