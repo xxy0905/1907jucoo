@@ -89,8 +89,8 @@ class navigation
         );
     }
     async componentWillMount(){
-          console.log(this.props.location.state.id,111111111111111)
-          console.log(await getShowList(0,this.props.location.state.id,1),3333333333333)
+        //   console.log(this.props.location.state.id,111111111111111)
+        //   console.log(await getShowList(0,this.props.location.state.id,1),3333333333333)
           this.props.getShowLists(0,this.props.location.state.id,1)
     }
     async componentDidMount(){
@@ -100,13 +100,13 @@ class navigation
                     city:data.data.city_list
                 }
            )
-        console.log(this.state.city)
+        // console.log(this.state.city)
 
     }
 }
  
 const  mapStateToProps=(state)=>{
-    console.log(state,88888888888888888)
+    // console.log(state,88888888888888888)
     return  state
 
 }

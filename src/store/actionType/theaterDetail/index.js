@@ -1,4 +1,4 @@
 export default {
-    GET_SHOW_LIST:"GET_SHOW_LIST",
+    GET_SHOW_DETAIL:"GET_SHOW_DETAIL",
     GET_HEADER:"GET_HEADER"
 }

@@ -224,7 +224,10 @@ class Ticket extends Component {
             </div>
             {
               this.state.showList.length>3?
-              <div className={style.mores}>
+              <div className={style.mores} onClick={()=>{
+                // this.props.history.push("/show")
+                this.props.history.push({pathname:'/show',state:{id:this.props.category_id}})
+              }}>
                 <span>查看更多演出 ></span> 
               </div>:""
             }
