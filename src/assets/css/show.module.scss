@@ -1,0 +1,165 @@
+.top    {
+    margin: 0 auto;
+    height: 88px;
+    width: 750px;
+    position: relative;
+    .top_left{
+        width: 50px;
+        height: 88px;
+        position: absolute;
+        vertical-align: middle;
+        top: 0;
+        left: 0;
+        font: 60px/88px '';
+        img{
+            position: absolute;
+            top: 50%;
+            margin-top: -22px;
+            width: 36px;
+            height: 36px;
+        };
+    }
+    span{
+       display: block;
+       width: 750px;
+       font-size: 36px;
+       line-height: 88px;
+       text-align: center;
+    }
+    .top_right{
+        position: absolute;
+        width: 50px;
+        height: 88px;
+        right: 0;
+        top: 0;
+        img{
+            position: absolute;
+            top: 50%;
+            margin-top: -22px;
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 750px;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+    font-size: 30px;
+    
+    .slider{
+        width: 558px;
+        overflow-x: scroll;
+        white-space: nowrap;
+        overflow-y: hidden;
+        display: flex;
+        justify-content: space-between;
+        span{
+            display: block;
+            margin-left: 20px;
+            
+        }
+    }
+    .fff{
+        width: 90px;
+        background: red;
+        .te{
+            display: inline-block;
+            width: 120px;
+            z-index: 500;
+        }
+    }
+    .span{
+        display: block;
+        color: #FF6743;
+        border-bottom: 2px solid  #FF6743;
+    }
+    
+}
+
+.chouti{
+    width: 350px;
+}
+.section{
+   width: 730px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin: 0 auto; 
+}
+
+.box{
+    width: 342px;
+    height: 679px;
+    .img_box{
+        width: 340px;
+        height: 462px;
+        img{
+            width: 340px;
+        }
+    }
+    .img_bottom{
+        width: 340px;
+        height: 224;
+        box-sizing: border-box;
+        padding: 20px;
+        p{
+            img{
+                width: 66px;
+            }
+            span{
+                font-size: 28px;
+            }
+        }
+        .text{
+            span{
+                font-size:32px;
+                color: #FF6743;
+            }
+        }
+    }
+}
+.hidden_box{
+    width: 582px;
+    height: 1206px;
+    .city_content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+       span{
+           display: block;
+           width: 168px;
+           height: 64px;
+           text-align: center;
+           line-height: 64px;
+          
+       }
+    }
+    .box_bottom{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        display: flex;
+        div{
+            background: #FFFFFF;
+            height: 90px;
+            text-align: center;
+            line-height: 90px;
+            border-top: 1px solid #000;
+            width:291px;
+        }
+        .te{ 
+            width:291px;
+            background-color: #FF6743;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import  ticketType from '../../actionType/ticket'
 import  ticketInit  from  '../../state/ticket'
 export default  function (state=ticketInit,{type,payload}){
-    console.log(1111,payload)
+    // console.log(1111,payload)
     state = JSON.parse(JSON.stringify(state));
      if(type===ticketType.GET_TICKET){
          state.desc = payload.static_data.show_desc.desc;
