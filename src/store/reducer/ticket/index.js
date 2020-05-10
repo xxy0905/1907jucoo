@@ -1,9 +1,11 @@
 import  ticketType from '../../actionType/ticket'
 import  ticketInit  from  '../../state/ticket'
 export default  function (state=ticketInit,{type,payload}){
-    console.log(1111,payload)
+    // console.log(1111,payload)
     state = JSON.parse(JSON.stringify(state));
      if(type===ticketType.GET_TICKET){
+         state.is_package=payload.static_data.is_package;
+         state.discount_max_price=payload.static_data.discount_max_price;
          state.desc = payload.static_data.show_desc.desc;
          state.important_note = payload.static_data.important_note;
          state.support=payload.static_data.support.list;
@@ -20,9 +22,6 @@ export default  function (state=ticketInit,{type,payload}){
          state.venue_name=payload.static_data.venue.venue_name;
          state.list=payload.static_data.show_notice.list
          
-     }
-     if(type === ticketType.GET_RECOMMEND){
-        state.showList = payload.list;
      }
      return state
 }

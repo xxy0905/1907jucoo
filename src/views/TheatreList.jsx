@@ -23,7 +23,7 @@ class TheatreList extends Component {
                                 <div className={style.theater_info} >
                         <div className={style.theater_info_box}>
                             <div className={style.theater_title} onClick={()=>{
-                                this.props.history.push("/theatre/detail/"+v.id)
+                                this.props.history.push("/theatre/detail/"+v.id+"/"+v.vid)
                             }}>
                                 <div className={style.img7}><img src={v.pic} alt=""/></div>
                                 <div className={style.theater_name}>
@@ -124,7 +124,7 @@ class TheatreList extends Component {
     }
 }
 function mapStateToProps(state){
-    console.log(3333,state)
+    // console.log(3333,state)
     // return state
     return {
         theatre_list:state.theatreList.theatre_list,

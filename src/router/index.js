@@ -11,7 +11,7 @@ export default  [
         component:Ticket
     },
     {
-        path:"/theatre/detail/:id",
+        path:"/theatre/detail/:id/:vid",
         component:TheatreDetail
     },
     {

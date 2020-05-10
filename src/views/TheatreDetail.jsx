@@ -52,7 +52,9 @@ class TheaterDetail extends Component {
                         <div className={style.hot_title}>
                             <span>热门演出</span>   
                         </div>
-                        
+                        {
+                            console.log(this.props.list)
+                        }
                         {
                     
                     this.props.list.map((v,i)=>(
@@ -87,14 +89,26 @@ class TheaterDetail extends Component {
             </div>
         )
     }
-    componentDidMount(){
-        this.props.showList();
+    
+    // shouldComponentUpdate(nextProps,nextState){
+    //     console.log(this.props.venue_ids,nextProps.venue_ids)
+    //     if(this.props.venue_ids===nextProps.venue_ids){
+    //         return true
+    //     }else{
+    //         return false
+    //     }
+    //     // this.props.showList(nextProps.venue_ids);
+    //     // return true
+    // }
+    componentWillMount(){
+        
+        this.props.showList(this.props.match.params.vid);
         this.props.header(this.props.match.params.id)
     }
 }
 
 function mapStateToProps({theaterDetail}){
-    console.log(theaterDetail)
+    // console.log(theaterDetail)
     // return state
     return {
         list:theaterDetail.theater_detail,
@@ -109,9 +123,9 @@ function mapStateToProps({theaterDetail}){
 function mapDispatchToProps(dispatch){
     
     return{
-        showList(){
-            dispatch(theaterDetailCreator.getShow())
-            console.log(this)
+        showList(venue_ids){
+            dispatch(theaterDetailCreator.getShow(venue_ids))
+            // console.log(this)
         },
         header(id){
             dispatch(theaterDetailCreator.getH(id))
