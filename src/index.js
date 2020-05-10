@@ -15,13 +15,13 @@ import {
 import "lib-flexible"
 React.Component.prototype.$filters = filters
 ReactDOM.render(
-      <React.StrictMode>
+      
         <Provider store={store}>
             <Router>
                   <App />
             </Router>
         </Provider>
-      </React.StrictMode>,
+      ,
   document.getElementById('root')
 );
 

@@ -49,7 +49,7 @@ class navigation
                    <React.Fragment>
                     <Drawer  
                     anchor='right' open={this.state.bool} >
-                    {'wweerjkeorke'}
+                      <h2>城市</h2>
                       <div className={nav.hidden_box}>
                           <div className={nav.city_content}>
                               {
