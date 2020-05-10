@@ -13,9 +13,9 @@ export function getHe(payload) {
     }
 }
 export default {
-    getShow(){
+    getShow(venue_ids){
         return async (dispatch)=> {
-            const {data}=await axios.get("/api/Show/Search/getShowList?page=1&venue_id=2400,2419&version=6.1.1&referer=2")
+            const {data}=await axios.get("/api/Show/Search/getShowList?page=1&venue_id="+venue_ids+"&version=6.1.1&referer=2")
             dispatch(getShowList(data.data))
             // console.log(9999999999,data.data)
         }

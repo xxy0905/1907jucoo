@@ -1,11 +1,21 @@
 .ticket{
     background: #f0f0f0;
-    position: absolute;
+    
 }
 .top{
     height: 436px;
-    background: #181818;
-    box-shadow:0 0 50px #fff inset;
+    box-shadow:0 0 300px #333 inset;
+    position: relative
+}
+.bg{
+    height: 400px;
+    position: absolute;
+}
+.bg img{
+    height:100%;
+    width: 100%;
+    -webkit-filter: blur(30px)
+    
 }
 .title{
     height: 89px;
@@ -36,10 +46,12 @@
 }
 .img2{
     position:relative;
+    
 }
 .img2 img{
     display: block;
     height: 290px;
+    border-radius: 10px;
 }
 .img1{
     position: absolute;
@@ -72,7 +84,6 @@
 }
 .support{
     background: #fff;
-    height: 425px;
     margin-bottom: 20px;
 }
 .item{
@@ -86,12 +97,12 @@
     margin-right: 30px;
 }
 .brief{
-    height: 222px;
     margin: 0 30px;
+    display: flex
+    
 }
 .info{
-    height: 179px;
-    position: relative;
+    flex: 1
 }
 .brief p:first-child{
     font-size: 36px;
@@ -104,6 +115,10 @@
 .brief p:nth-child(3){
     font-size: 24px;
     color: #666
+}
+.location{
+    position: relative;
+    width: 100px;
 }
 .position{
     position: absolute;
@@ -123,6 +138,7 @@
 }
 .plus{
     height: 121px;
+    margin-top:30px; 
 }
 .plus_tips{
     height: 88px;
@@ -411,4 +427,19 @@
 }
 .placeholder{
     height: 110px;
+}
+.mores{
+    height: 72px;
+    text-align: center;
+    padding-bottom: 30px;
+    background: #fff;
+}
+.mores span{
+    width: 320px;
+    line-height: 72px;
+    font-size: 30px;
+    border: 2px solid #ff6743;
+    color:#ff6743;
+    border-radius: 10px;
+    padding: 15px 50px;
 }

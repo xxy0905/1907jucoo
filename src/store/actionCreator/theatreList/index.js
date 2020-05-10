@@ -11,7 +11,7 @@ export default {
         return async (dispatch)=> {
             const {data}=await axios.get('/api/theatre/index/getTheatreList?page=1&version=6.1.1&referer=2')
             dispatch(getTheatreList(data.data))
-            console.log(9999999999,data.data)
+            // console.log(9999999999,data.data)
         }
         
     }
